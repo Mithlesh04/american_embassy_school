@@ -1,3 +1,6 @@
+const URL = location.href;
+
+
 $(document).ready(function(){
     const stdForm = $('form.student-form')
     const stdDetails = {}
@@ -38,7 +41,7 @@ $(document).ready(function(){
 
     $.when(
 
-        $.getJSON(location.pathname+"/server/grades_list.php?type=get",data=>{
+        $.getJSON(URL+"server/grades_list.php?type=get",data=>{
             if(data){
                 if(data.data){
                     for(let g of data.data){
@@ -50,7 +53,7 @@ $(document).ready(function(){
             }
         }),
 
-        $.getJSON(location.pathname+"/server/school_list.php?type=get",data=>{
+        $.getJSON(URL+"server/school_list.php?type=get",data=>{
             if(data){
                 if(data.data){
                     for(let s of data.data){
@@ -276,7 +279,7 @@ $(document).ready(function(){
             isRequesting = true;
             const msg = stdForm.find('div#viewDetails p#errorMsg:first')
             msg.text('Please wait...')
-            $.post(location.pathname+'/server/student_form.php', stdDetails, function (data) {
+            $.post(URL+'server/student_form.php', stdDetails, function (data) {
                 isRequesting = false;
                 if(data){
                     data = JSON.parse(data)                   
