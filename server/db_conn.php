@@ -12,5 +12,7 @@ $db_name = "aes";
 $mysqli = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
 if ($mysqli->connect_error) {
-    die(json_encode(array("status" => 505, "message" => "Error connecting to database")));
+    die(json_encode(array("status" => 505, "message" =>
+        $mysqli -> connect_error
+    ."Error connecting to database")));
 }
