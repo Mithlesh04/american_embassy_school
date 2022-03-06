@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- import css file from css dict -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- import jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!-- import js file from js dict -->
+    <script src="js/main.js"></script>
+
+    <title>American Embassy School</title>
+
+</head>
+<body>
+
+    <header class="header bg-white">
+        <div class="d-flex align-items-center">
+            <img class="brand" src="assets/aes_logo.png" alt="logo">
+            <a class="brand-name" href="#">American Embassy School</a>
+        </div>
+    </header>
+
+    
+    <main class="main">
+        <div class="container bg-white">
+
+                <form class="student-form" method="post">
+                   
+                    <div id="inputDetails">
+                        <div class="row">
+                            <p style="font-weight: bold;font-size: 16px;margin-bottom:20px;">Student Details</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 form-group">
+                                <label>Student First Name</label>
+                                <input type="text" class="form-control text-capitalize" name="stdFirstName" placeholder="First Name" required>
+                            </div>
+                            <div class="col-3 form-group">
+                                <label>Student Last Name</label>
+                                <input type="text" class="form-control text-capitalize" name="stdLastName" placeholder="Last Name" required>
+                            </div>
+                            <div class="col-3 form-group">
+                                <label>Student Full Name</label>
+                                <input type="text" class="form-control text-capitalize" name="stdFullName" placeholder="Full Name" readonly>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 form-group">
+                                <label>Select School</label>
+                                <select class="form-control text-capitalize" name="stdSchool" required>
+                                    <option value="0">Select School</option>
+                                </select>
+                            </div>
+                            <div class="col-3 form-group">
+                                <label>Student Grade</label>
+                                <select class="form-control text-capitalize" name="stdGrade" required>
+                                    <option value="0">Select Grade</option>
+                                </select>
+                            </div>
+                            <div class="col-3"></div>
+                        </div>
+                        <div id="condFields" class="row"></div>
+                        <div class="row">
+                            <p style="font-weight: bold;font-size: 16px;margin-top:20px;margin-bottom: 20px;">Parents Details</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 form-group">
+                                <label>Mother Name</label>
+                                <input type="text" class="form-control text-capitalize" name="stdMotherName" placeholder="Mother Name" required>
+                            </div>
+                            <div class="col-3 form-group">
+                                <label>Father Name</label>
+                                <input type="text" class="form-control text-capitalize" name="stdFatherName" placeholder="Father Name" required>
+                            </div>
+                            <div class="col-3"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 form-group">
+                                <label>Mother Email</label>
+                                <input type="email" class="form-control text-capitalize" name="stdMotherEmail" placeholder="Mother Email">
+                            </div>
+                            <div class="col-3 form-group">
+                                <label>Father email</label>
+                                <input type="email" class="form-control text-capitalize" name="stdFatherEmail" placeholder="Father Email">
+                            </div>
+                            <div class="col-3"></div>
+                        </div>
+
+                        <div class="row" style="justify-content: center;">
+                            <p id="errorMsg" style="text-align: center;color: brown;"></p>
+                        </div>
+    
+                        <div class="row" style="margin-top:20px;padding-bottom:20px;justify-content: center;align-items: center;">
+                            <div><button type="reset" id="btnReset" class="btn btn-secondary">Reset</button></div>
+                            <div><button type="button" id="btnContinue" class="btn btn-primary">Continue</button></div>
+                        </div>
+                    </div>
+
+                    <div id="viewDetails"  style="display: none;">
+                        
+                    </div>
+
+                </form>
+
+
+        </div>
+    </main>
+
+
+    
+    <footer>
+        <div class="container">
+            <div>
+                <img src="assets/aes_logo.png" alt="logo" width="100">
+            </div>
+            <p style="margin-top: 30px;">&copy; Copyright 2022 American Embassy School</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
