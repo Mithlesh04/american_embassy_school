@@ -4,7 +4,7 @@
 error_reporting(E_ERROR | E_PARSE);
 
 // Database connection
-$db_host = "13.234.112.173"; //change this to your database host name
+$db_host = "127.0.0.1"; //change this to your database host name
 $db_user = "root"; //change this to your database user name
 $db_pass = "root123"; //change this to your database password
 $db_name = "aes";
