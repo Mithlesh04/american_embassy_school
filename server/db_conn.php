@@ -6,7 +6,7 @@ error_reporting(E_ERROR | E_PARSE);
 // Database connection
 $db_host = "localhost";
 $db_user = "root";
-$db_pass = "";
+$db_pass = "root123";
 $db_name = "aes";
 
 $mysqli = new mysqli($db_host, $db_user, $db_pass, $db_name);
